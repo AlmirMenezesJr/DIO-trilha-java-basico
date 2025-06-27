@@ -2,15 +2,13 @@ import java.util.Scanner;
 
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
-        //TODO: conhecer e importar a classe scanner
-        //TODO: exibir mensagens para o usuario
-        // Obter pela classe scanner os valores digitados no terminal
-        // exibir a mensagem da conta criada
+        
+        
         //variaveis usadas
         int numeroConta = 0;
         String agencia = "";
         String nomeCliente = "";
-        float saldo = 0f;
+        double saldo = 0d;
         //cria object classe Scanner
         Scanner scanner1 = new Scanner(System.in);
 
@@ -25,11 +23,11 @@ public class ContaTerminal {
         numeroConta = scanner1.nextInt();
 
         System.out.println("\033[0m\n Informe o aporte inicial: \033[34m");
-        saldo = scanner1.nextFloat();
+        saldo = saldo + scanner1.nextDouble();
         
         scanner1.close();
 
-        System.out.printf("\033[0m\n Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %s e seu saldo atual de R$% já está disponível para saque.",nomeCliente,agencia,numeroConta,saldo);
+        System.out.printf("\033[0m\n Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo atual de R$%.2f já está disponível para saque.",nomeCliente,agencia,numeroConta,saldo);
       
 
         
